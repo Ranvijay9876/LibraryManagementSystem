@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using LibraryRanvijayProject.Models;
 
 namespace LibraryRanvijayProject.Data
 {
@@ -9,5 +10,6 @@ namespace LibraryRanvijayProject.Data
             : base(options)
         {
         }
+        public DbSet<LibraryRanvijayProject.Models.Author> Author { get; set; } = default!;
     }
 }

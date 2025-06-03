@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
 namespace LibraryRanvijayProject.Models
 {
@@ -7,8 +8,8 @@ namespace LibraryRanvijayProject.Models
     {
         [Key]
         public int BookId { get; set; }
-        public string String { get; set; }
-        public string Title { get; set; }
+        public string Tittle { get; set; }
+
         public string Author { get; set; }
         public string publisher { get; set; }
         public int year { get; set; }
@@ -18,6 +19,12 @@ namespace LibraryRanvijayProject.Models
 
         [ForeignKey("LibraryId")]
         public Library Library { get; set; }
+        public ICollection<BookBorrowDetails> BookBorrowDetails { get; set; }
+
+
+
+
+
 
     }
 }

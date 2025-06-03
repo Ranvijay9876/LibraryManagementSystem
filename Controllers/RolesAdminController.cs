@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using LibraryRanvijayProject.Models;
-using .Data;
+using LibraryRanvijayProject.Data;
 using Microsoft.AspNetCore.Authorization;
 
 namespace LibraryRanvijayProject.Controllers
