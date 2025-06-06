@@ -10,7 +10,8 @@ namespace LibraryRanvijayProject.Models
         public string Address{ get; set; }
 
         public ICollection<Book> Book { get; set; }
-        public ICollection
+        public ICollection<Staff> Staff { get; set; }   
+
 
     }
 }
