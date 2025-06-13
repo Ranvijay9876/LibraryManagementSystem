@@ -1,0 +1,44 @@
+﻿@model LibraryRanvijayProject.Models.Member
+
+@{
+    ViewData["Title"] = "MyProfile";
+}
+
+<h1>My Profile</h1>
+
+<div>
+    <h4>Member</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.lName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.lName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.phone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+    </dl>
+</div>
+<br />
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.MemberId" class="btn btn-md btn-success">Edit</a> 
+    
+</div>

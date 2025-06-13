@@ -1,0 +1,45 @@
+﻿@model LibraryRanvijayProject.Models.Staff
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Staff</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StafFName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StafFName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StafLName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StafLName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.position)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.position)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Library)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Library.LibraryId)
+        </dd>
+    </dl>
+    <br />
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="StaffId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> 
+    @*     <a asp-action="Index">Back to List</a> *@
+    </form>
+</div>

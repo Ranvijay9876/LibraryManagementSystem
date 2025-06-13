@@ -1,0 +1,43 @@
+﻿@model LibraryRanvijayProject.Models.Staff
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Staff</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StafFName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StafFName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StafLName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StafLName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.position)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.position)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Library)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Library.LibraryId)
+        </dd>
+    </dl>
+</div>
+<br />
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.StaffId" class="btn btn-md btn-success">Edit</a> 
+    @* <a asp-action="Index">Back to List</a> *@
+</div>

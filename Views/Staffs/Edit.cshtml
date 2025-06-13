@@ -1,0 +1,50 @@
+﻿@model LibraryRanvijayProject.Models.Staff
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Staff</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="StaffId" />
+            <div class="form-group">
+                <label asp-for="StafFName" class="control-label"></label>
+                <input asp-for="StafFName" class="form-control" />
+                <span asp-validation-for="StafFName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StafLName" class="control-label"></label>
+                <input asp-for="StafLName" class="form-control" />
+                <span asp-validation-for="StafLName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="position" class="control-label"></label>
+                <input asp-for="position" class="form-control" />
+                <span asp-validation-for="position" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LibraryId" class="control-label"></label>
+                <select asp-for="LibraryId" class="form-control" asp-items="ViewBag.LibraryId"></select>
+                <span asp-validation-for="LibraryId" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+@* 
+<div>
+    <a asp-action="Index">Back to List</a>
+</div> *@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

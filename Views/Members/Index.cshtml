@@ -1,0 +1,53 @@
+﻿@model IEnumerable<LibraryRanvijayProject.Models.Member>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-md btn-primary">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.phone)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phone)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MemberId" class="btn btn-md btn-success">Edit</a> 
+                <a asp-action="Details" asp-route-id="@item.MemberId" class="btn btn-md btn-primary">Details</a> 
+                <a asp-action="Delete" asp-route-id="@item.MemberId" class="btn btn-md btn-danger">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
