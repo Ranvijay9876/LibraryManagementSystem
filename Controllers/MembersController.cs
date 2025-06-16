@@ -29,11 +29,12 @@ namespace LibraryRanvijayProject.Controllers
         }
 
         [Authorize (Roles ="Member")]
-        public async Task<IActionResult> MyProfile()
+        public async Task<IActionResult> MyBookBorrow()
         {
             string username = User.Identity.Name;
-            var getProfile = _context.Member.Where(c => c.Email == username).FirstOrDefault();
-            return View(getProfile);
+            var getMember = _context.Member.Where(c => c.Email == username).FirstOrDefault().MemberId;
+            var getBookBorrow = _context.BookBorrow.Where(q => q.MemberId == getMember).Tolist();
+            return View(getBookBorrow);
         }
 
         // GET: Members
