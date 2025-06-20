@@ -1,0 +1,49 @@
+﻿@model IEnumerable<LibraryRanvijayProject.Models.BookBorrow>
+
+@{
+    ViewData["Title"] = "MyBookBorrow";
+}
+
+<h1>MyBookBorrow</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LoanDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Duedate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReturnDate)
+            </th>
+            <th>Remarks</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoanDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duedate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReturnDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Member.MemberId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.borrowId" class="btn btn-md btn-success">Edit</a> 
+                <a asp-action="Details" asp-route-id="@item.borrowId" class="btn btn-md btn-primary">Details</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

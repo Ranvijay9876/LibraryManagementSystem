@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LibraryRanvijayProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1799b38cae177482bcd0c65445d910c14557bb82")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77f0dac87b5a5e405b6131c2db35a485b3fba525")]
 [assembly: System.Reflection.AssemblyProductAttribute("LibraryRanvijayProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LibraryRanvijayProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

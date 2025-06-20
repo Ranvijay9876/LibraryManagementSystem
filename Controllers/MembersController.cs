@@ -33,7 +33,7 @@ namespace LibraryRanvijayProject.Controllers
         {
             string username = User.Identity.Name;
             var getMember = _context.Member.Where(c => c.Email == username).FirstOrDefault().MemberId;
-            var getBookBorrow = _context.BookBorrow.Where(q => q.MemberId == getMember).Tolist();
+            var getBookBorrow = _context.BookBorrow.Where(q => q.MemberId == getMember).ToList ();
             return View(getBookBorrow);
         }
 
